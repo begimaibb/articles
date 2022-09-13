@@ -1,3 +1,4 @@
+{% load static %}
 <h1 class="text-center">Статьи</h1>
 <div class="row">
     {% for article in articles %}
@@ -5,6 +6,21 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ article.title }}</h5>
+{#                    <button id="button" data-articles-link="{% url "webapp:index" %}" >Like</button>#}
+{#                    <i id="button" class="'fa-regular fa-heart" data-articles-link="{% url "webapp:index" %}"></i>#}
+{#                    <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off" data-articles-link="{% url "webapp:index" %}" >Like</button>#}
+                    <div class="wrapper">
+                      <div class="like">
+                        <i onclick="count()" class="fas fa-heart icon" data-articles-link="{% url "webapp:index" %}" ></i>
+                        <br>
+                        <input id="likeCount" type="number" value="0">
+                      </div>
+                      <div class="dislike">
+                        <i onclick="count1()" class="fas fa-heart-broken icon" data-articles-link="{% url "webapp:index" %}"></i>
+                        <br>
+                        <input id="dislikeCount" type="number" value="0">
+                      </div>
+                    </div>
                 </div>
                 <a href="{{ article.get_absolute_url }}" class="card-link btn btn-primary">Подробнее</a>
             </div>
@@ -15,3 +31,12 @@
         <div class="text-center">{% include "partial/pagination.html" %}</div>
     {% endif %}
 </div>
+
+{#<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"#}
+{#        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"#}
+{#        crossorigin="anonymous"></script>#}
+
+<script src="{% static "js/index.js" %}"></script>
+
+
+</script>
