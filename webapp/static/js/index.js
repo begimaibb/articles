@@ -24,6 +24,6 @@ function count(){
   likeCount.value = parseInt(likeCount.value) + 1;
 }
 
-function count1(){
+function dislike(){
   dislikeCount.value = parseInt(dislikeCount.value) + 1;
 }
