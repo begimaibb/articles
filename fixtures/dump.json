@@ -1,0 +1,142 @@
+[
+{
+    "model": "webapp.article",
+    "pk": 26,
+    "fields": {
+        "created_at": "2022-07-15T11:48:02.141Z",
+        "updated_at": "2022-07-27T14:23:02.300Z",
+        "title": "Article5",
+        "content": "Content5",
+        "author": 1,
+        "tags": []
+    }
+},
+{
+    "model": "webapp.article",
+    "pk": 27,
+    "fields": {
+        "created_at": "2022-07-19T14:18:13.448Z",
+        "updated_at": "2022-07-27T14:23:02.301Z",
+        "title": "Article6",
+        "content": "Контент6",
+        "author": 1,
+        "tags": []
+    }
+},
+{
+    "model": "webapp.article",
+    "pk": 28,
+    "fields": {
+        "created_at": "2022-07-19T14:18:32.797Z",
+        "updated_at": "2022-07-27T14:23:02.303Z",
+        "title": "Article7",
+        "content": "Контент7",
+        "author": 1,
+        "tags": []
+    }
+},
+{
+    "model": "webapp.article",
+    "pk": 29,
+    "fields": {
+        "created_at": "2022-07-19T14:55:51.264Z",
+        "updated_at": "2022-09-13T02:36:06.133Z",
+        "title": "Article1",
+        "content": "Content1",
+        "author": 1,
+        "tags": [
+            8
+        ]
+    }
+},
+{
+    "model": "webapp.article",
+    "pk": 30,
+    "fields": {
+        "created_at": "2022-07-19T14:56:00.771Z",
+        "updated_at": "2022-07-27T14:23:02.304Z",
+        "title": "Article2",
+        "content": "vdfvfs",
+        "author": 1,
+        "tags": []
+    }
+},
+{
+    "model": "webapp.article",
+    "pk": 31,
+    "fields": {
+        "created_at": "2022-07-19T14:56:40.640Z",
+        "updated_at": "2022-07-27T14:23:02.306Z",
+        "title": "Article3",
+        "content": "cdscds",
+        "author": 1,
+        "tags": []
+    }
+},
+{
+    "model": "webapp.article",
+    "pk": 39,
+    "fields": {
+        "created_at": "2022-07-27T14:29:43.824Z",
+        "updated_at": "2022-09-13T02:36:57.217Z",
+        "title": "Article4",
+        "content": "Content4",
+        "author": 1,
+        "tags": [
+            9
+        ]
+    }
+},
+{
+    "model": "webapp.article",
+    "pk": 46,
+    "fields": {
+        "created_at": "2022-08-09T13:52:53.829Z",
+        "updated_at": "2022-09-13T02:31:28.546Z",
+        "title": "Summer 2022 hits",
+        "content": "Top 50",
+        "author": 2,
+        "tags": [
+            7
+        ]
+    }
+},
+{
+    "model": "webapp.comment",
+    "pk": 1,
+    "fields": {
+        "created_at": "2022-08-09T15:09:06.630Z",
+        "updated_at": "2022-09-13T02:33:34.395Z",
+        "text": "Adele is number 1",
+        "author": 1,
+        "article": 46
+    }
+},
+{
+    "model": "webapp.tag",
+    "pk": 7,
+    "fields": {
+        "created_at": "2022-07-15T11:46:39.007Z",
+        "updated_at": "2022-07-15T11:46:39.007Z",
+        "name": "Музыка"
+    }
+},
+{
+    "model": "webapp.tag",
+    "pk": 8,
+    "fields": {
+        "created_at": "2022-07-15T11:46:45.652Z",
+        "updated_at": "2022-07-15T11:46:45.653Z",
+        "name": "Спорт"
+    }
+},
+{
+    "model": "webapp.tag",
+    "pk": 9,
+    "fields": {
+        "created_at": "2022-07-15T11:46:52.245Z",
+        "updated_at": "2022-07-15T11:46:52.245Z",
+        "name": "Фильмы"
+    }
+}
+]
