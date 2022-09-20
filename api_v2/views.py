@@ -35,3 +35,47 @@ class ArticleView(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)
+
+
+class ArticleCrudView(APIView):
+
+    def get(self, request, article_pk, *args, **kwargs):
+        article_instance = self.get_object(article_pk)
+        if not article_instance:
+            return Response(
+                {"res": "Статьи с таким pk не существует"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        serializer = ArticleSerializer(article_instance)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def put(self, request, article_pk, *args, **kwargs):
+        article_instance = self.get_object(article_pk)
+        if not article_instance:
+            return Response(
+                {"res": "Статьи с таким pk не существует"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        data = {
+            'title': request.data.get('title'),
+            'content': request.data.get('content'),
+        }
+        serializer = ArticleSerializer(instance=article_instance, data=data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, article_pk, *args, **kwargs):
+        article_instance = self.get_object(article_pk)
+        if not article_instance:
+            return Response(
+                {"res": "Статьи с таким pk не существует"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        article_instance.delete()
+        return Response(
+            {"res": "Статья удалена!"},
+            status=status.HTTP_200_OK
+        )
